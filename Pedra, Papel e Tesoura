@@ -1,0 +1,72 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char player1[256];
+    char player2[256];
+    char jogador1[256];
+    char jogador2[256];
+
+    printf("Jogador 1, qual o seu nome?\n");
+    scanf ("%s",&jogador1);
+    printf("--------------------------\n");
+    printf("Jogador 2, qual o seu nome?\n");
+    scanf("%s",&jogador2);
+    printf("---------------------------\n");
+    printf("---------------------------\n");
+    printf("%s, o que voce escolhe? \n",&jogador1);
+    scanf ("%s", &player1);
+    printf("---------------------------\n");
+    printf("%s, o que voce escolher?\n", &jogador2);
+    scanf ("%s", player2);
+    printf("---------------------------\n");
+    printf("---------------------------\n");
+
+    if(strcmp(player1,"papel") ==0){
+        if(strcmp(player2,"papel") ==0){
+            printf("Empate");
+    }else if (strcmp(player2,"tesoura") ==0){
+            printf("%s ganhou pq tesoura corta papel!\n",&jogador2);
+
+    }else if (strcmp(player1,"pedra") ==0){
+        printf ("%s ganhou pq papel envolve pedra\n",&jogador1);
+
+
+    }else{
+        printf ("%s jogou uma informacao errada", jogador2);
+    }
+    }
+
+
+    if(strcmp(player1,"tesoura") ==0){
+        if(strcmp(player2,"papel") ==0){
+            printf("%s ganhou pq tesoura corta papel!\n",&jogador1);
+    }else if (strcmp(player2,"tesoura") ==0){
+            printf("Empate!");
+    }else if (strcmp(player2,"pedra") ==0){
+        printf ("%s ganhou pedra quebra tesoura\n",&jogador2);
+
+    }else{
+        printf ("%s jogou uma informacao errada", jogador2);
+    }
+    }
+    if(strcmp(player1,"pedra") ==0){
+        if(strcmp(player2,"papel") ==0){
+            printf("%s ganhou pq papel envolve pedra!\n",&jogador2);
+    }else if (strcmp(player2,"tesoura") ==0){
+            printf("%s ganhou pq pedra quebra tesoura!",jogador1);
+
+    }else if (strcmp(player2,"pedra") ==0){
+        printf ("Empate!!!");
+    }
+
+
+    return 0;
+}
+    }
+
+
+
+
+
